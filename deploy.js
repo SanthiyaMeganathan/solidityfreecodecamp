@@ -6,11 +6,12 @@ async function main() {
   //http://127.0.0.1:7545
   console.log("helo");
   const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
-  // console.log(provider);
+  //console.log(provider);
 
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
   //console.log(wallet);
-  console.log(process.env.PRIVATE_KEY);
+
+  //console.log(process.env.PRIVATE_KEY);
   const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
   const binary = fs.readFileSync(
     "./SimpleStorage_sol_SimpleStorage.bin",
